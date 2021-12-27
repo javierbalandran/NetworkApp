@@ -10,8 +10,8 @@ def ip_reach(ip_list):
 
         ping_reply = subprocess.call(
             "ping %s -c 2" % (ip),
-            stdout=subprocess.subprocess.DEVNULL,
-            stderr=subprocess.subprocess.DEVNULL,
+            stdout=subprocess.DEVNULL,
+            stderr=subprocess.DEVNULL,
             shell=True
         )
 

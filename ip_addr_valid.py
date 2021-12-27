@@ -26,12 +26,12 @@ def ip_addr_valid(addr_list):
         # Reserved for future use: 240.0.0.0 - 255.255.255.254
         is_future_reserved = 240 <= int(octet_list[0]) <= 255
 
-        if is_valid_length(ip) and not (
-            is_loopback(ip)
-            or is_multicast(ip)
-            or is_broadcast(ip)
-            or is_link_local(ip)
-            or is_future_reserved(ip)
+        if is_valid_length and not (
+            is_loopback
+            or is_multicast
+            or is_broadcast
+            or is_link_local
+            or is_future_reserved
         ):
             continue
         else:
