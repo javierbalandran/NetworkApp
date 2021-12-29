@@ -1,4 +1,4 @@
-import os.path
+import os
 import sys
 
 
@@ -6,11 +6,12 @@ import sys
 def ip_file_valid():
 
     # Prompting user for input
-    ip_file = input("\n# Enter IP file path and name (e.g. D:\MyApps\myfile.txt): ")
+    ip_file = os.environ.get('IPFILE')
+    # ip_file = input("\n# Enter IP file path and name (e.g. D:\MyApps\myfile.txt): ")
 
     # Checking if the file exists
     if os.path.isfile(ip_file) == True:
-        print("\n* IP file is valid\n")
+        print("\n* IP file is valid! :)\n")
     else:
         print(
             "\n* File {} does not exist. (Please check and try again.)\n".format(ip_file)
